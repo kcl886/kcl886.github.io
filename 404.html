@@ -95,7 +95,7 @@ const getScript = url => new Promise((resolve, reject) => {
   isHome: false,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2020-12-19 23:54:18'
+  postUpdate: '2020-12-22 00:50:04'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -120,7 +120,7 @@ const getScript = url => new Promise((resolve, reject) => {
       document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
     }
   }
-  const autoChangeMode = '2  Switch dark mode between 6 pm to 6 am'
+  const autoChangeMode = '1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am'
   const t = saveToLocal.get('theme')
   if (autoChangeMode === '1') {
     const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -177,7 +177,7 @@ if (asideStatus !== undefined) {
   const getIcon = (icon, mail) => {
     if (icon) return icon
     
-    let defaultIcon = ''
+    let defaultIcon = '?d=monsterid'
     let iconUrl = `https://gravatar.loli.net/avatar/${md5(mail.toLowerCase()) + defaultIcon}`
     return iconUrl
   }
@@ -215,21 +215,21 @@ if (asideStatus !== undefined) {
   const getComment = () => {
       let serverURL = ''
       if (true) {
-        serverURL = 'https://ha1rjhi1.lc-cn-n1-shared.com'
+        serverURL = 'https://1a3n6vvr.api.lncldglobal.com'
       } else {
-        serverURL = 'https://HA1rjhi1.api.lncldglobal.com'
+        serverURL = 'https://1a3N6VvR.api.lncldglobal.com'
       }
 
     var settings = {
       "method": "GET",
       "headers": {
-        "X-LC-Id": 'HA1rjhi1Pl3FxRdL6mFq5Xyu-gzGzoHsz',
-        "X-LC-Key": 'xrCPzWNVsGoH0GOqU473mT0O',
+        "X-LC-Id": '1a3N6VvRNNQtd5SFnOaFODgn-MdYXbMMI',
+        "X-LC-Key": 'uw6ekpERwToeC8LKfcIj7215',
         "Content-Type": "application/json"
       },
     }
 
-    fetch(`${serverURL}/1.1/classes/Comment?limit=6&order=-createdAt`,settings)
+    fetch(`${serverURL}/1.1/classes/Comment?limit=4&order=-createdAt`,settings)
       .then(response => response.json())
       .then(data => {
         const valineArray = data.results.map(function (e) {
